@@ -1,0 +1,52 @@
+@import 'animate.css';
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    width: 300px;
+    height: 300px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+    .cell.x::before {
+        content: "X";
+        color: #f00;
+    }
+
+    .cell.o::before {
+        content: "O";
+        color: #00f;
+    }
+
+button {
+    margin-top: 20px;
+    padding: 20px 20px;
+}
+.status-zoom {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
