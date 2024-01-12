@@ -1,11 +1,12 @@
 @import 'animate.css';
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -32,21 +33,36 @@
     cursor: pointer;
 }
 
-    .cell.x::before {
-        content: "X";
-        color: #f00;
-    }
+.cell.x::before {
+    content: "X";
+    color: #f00;
+}
 
-    .cell.o::before {
-        content: "O";
-        color: #00f;
-    }
+.cell.o::before {
+    content: "O";
+    color: #00f;
+}
 
 button {
-    margin-top: 20px;
-    padding: 20px 20px;
+    margin: 15px;
+    padding: 30px;
 }
+
+.TitleRulesContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 50px;
+    padding: 6%;
+}
+
 .status-zoom {
-    transform: scale(1.2);
-    transition: transform 0.5s;
+    transform: scale(3.2);
+    transition: transform 1.3s;
+}
+
+.loser-message {
+    transform: scale(2.2);
+    transition: transform 1s;
 }
