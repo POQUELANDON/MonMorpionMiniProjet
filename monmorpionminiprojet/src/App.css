@@ -14,6 +14,12 @@
     height: 100vh;
 }
 
+.titleH1 {
+    background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -54,7 +60,7 @@ button {
     flex-wrap: nowrap;
     align-items: center;
     gap: 50px;
-    padding: 6%;
+    padding: 2%;
 }
 
 .status-zoom {
@@ -65,4 +71,8 @@ button {
 .loser-message {
     transform: scale(2.2);
     transition: transform 1s;
+}
+
+.highlight {
+    background-color: rgba(red, green, blue, 0.5);
 }

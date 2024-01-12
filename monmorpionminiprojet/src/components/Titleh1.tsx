@@ -2,7 +2,7 @@
 
 function Titleh1() {
     return (
-        <h1>Mon morpion en duos</h1>
+        <h1 className='titleH1'>Mon morpion en duos</h1>
     );
 }
 

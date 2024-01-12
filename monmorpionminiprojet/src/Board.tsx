@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TitleRules from './components/TitleRules'
 import Confetti from 'react-confetti';
 import { FaHandRock } from 'react-icons/fa';
+import { FaTrophy } from 'react-icons/fa';
 import 'animate.css';
 
 // Definition du type des valeurs possibles pour chaque case du jeu
@@ -76,7 +77,7 @@ const Board: React.FC = () => {
     const winner = calculateWinner(squares);
     let status;
     if (winner) {
-        status = 'Gagnant: ' + winner; // Affiche le gagnant
+        status = 'Gagnant est '+ winner +' !'; // Affiche le gagnant
     } else {
         status = 'Prochain joueur: ' + (xIsNext ? 'X' : 'O'); // Affiche le joueur suivant
     }
@@ -108,7 +109,7 @@ const Board: React.FC = () => {
             {confetti && <Confetti />}
             <div className='TitleRulesContent'>
                 {showRules && <TitleRules />}
-                <div className={`status ${winner ? 'animate__animated animate__zoomIn status-zoom' : ''}`}>{status}</div>
+                <div className={`status ${winner ? 'animate__animated animate__zoomIn status-zoom' : ''}`}>{winner && <FaTrophy />} {status}</div>
                 {loserMessage &&
                     <div className="loser-message"><FaHandRock /> {loserMessage} </div>}
             </div>
